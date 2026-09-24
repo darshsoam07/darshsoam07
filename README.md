@@ -168,7 +168,11 @@ Currently, I'm strengthening my foundation across **AWS, Docker, Kubernetes, Lin
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=darshsoam07&theme=tokyo-night&hide_border=true&area=true" width="95%" />
+<img
+  src="https://github-readme-activity-graph.vercel.app/graph?username=darshsoam07&theme=tokyo-night&hide_border=true&area=true"
+  width="95%"
+  alt="Darsh Soam GitHub Contribution Graph"
+/>
 
 </div>
 
