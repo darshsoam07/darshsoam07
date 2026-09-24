@@ -164,16 +164,6 @@ Currently, I'm strengthening my foundation across **AWS, Docker, Kubernetes, Lin
 
 ---
 
-## 🏆 GitHub Trophies
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=darshsoam07&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=7" />
-
-</div>
-
----
-
 ## 📊 Contribution Graph
 
 <div align="center">
