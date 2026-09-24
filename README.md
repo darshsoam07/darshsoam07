@@ -164,12 +164,12 @@ Currently, I'm strengthening my foundation across **AWS, Docker, Kubernetes, Lin
 
 ---
 
-## 📊 Contribution Graph
+## 📊 GitHub Contribution Graph
 
 <div align="center">
 
 <img
-  src="https://github-readme-activity-graph.vercel.app/graph?username=darshsoam07&theme=tokyo-night&hide_border=true&area=true"
+  src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=darshsoam07&theme=github_dark"
   width="95%"
   alt="Darsh Soam GitHub Contribution Graph"
 />
