@@ -1,96 +1,92 @@
-![Darsh Soam · Cloud engineering, infrastructure and automation](assets/infrastructure.svg)
+<div align="center">
+  <img src="./assets/hero.svg" alt="Darsh Soam — Cloud & DevOps Engineer" width="100%" />
+</div>
 
-# From a commit to a running service
+<br/>
 
-I'm Darsh, a computer science student at MIET in Meerut, specializing in cloud computing and DevOps. I like the work between writing an application and getting it into someone’s hands. Can I recreate its infrastructure from code? Can I release the next version the same way? Once it’s running, how do I know it’s healthy?
+### 01 • Philosophy & Focus
+I am a Computer Science student at **MIET (2024–2028)** focused on cloud infrastructure, reliability engineering, and agentic workflows. I care about what happens between writing code and keeping it alive in production:
+* **Declarative Infrastructure:** Can the entire environment be provisioned reproducibly through Terraform?
+* **Fault Recovery:** How do distributed components behave when queues saturate or workers drop?
+* **Observable Health:** What signals on a Grafana dashboard genuinely matter during an incident?
 
-**[Explore my engineering portfolio →](https://darshsoam.vercel.app/)**
+[Explore Interactive Portfolio →](https://darshsoam.vercel.app/)
 
-[Projects](#inside-my-projects) · [Toolbox](#engineering-toolbox) · [Learning roadmap](#learning-roadmap) · [Activity](#github-activity)
+<div align="center">
+  <img src="./assets/divider.svg" alt="divider" width="100%" />
+</div>
 
-## Inside my projects
+### 02 • Featured Engineering Systems
 
-### QueryVault · Ask a document and trace the answer
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>FailureLab</h4>
+      <sub><b>Distributed Systems • Reliability Engineering</b></sub>
+      <p>A testing playground for resilience patterns under controlled fault injection. Implements transactional outbox, circuit breakers, and bounded retries across asynchronous workers.</p>
+      <p><code>Python</code> • <code>FastAPI</code> • <code>RabbitMQ</code> • <code>Docker</code></p>
+      <a href="https://github.com/darshsoam07/FailureLab">View Repository →</a>
+    </td>
+    <td width="50%" valign="top">
+      <h4>QueryVault</h4>
+      <sub><b>AI Engineering • Document Intelligence</b></sub>
+      <p>Grounded enterprise retrieval platform pairing hybrid vector and keyword search with exact source citation traceability and PostgreSQL Row-Level Security.</p>
+      <p><code>React</code> • <code>TypeScript</code> • <code>Supabase</code> • <code>pgvector</code></p>
+      <a href="https://github.com/darshsoam07/QueryVault-Project">View Repository →</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>Expense Tracker with Insights</h4>
+      <sub><b>Full-Stack Analytics</b></sub>
+      <p>Financial transaction tracker featuring session-based authentication, category-based spending analytics, and clean CSV export capabilities.</p>
+      <p><code>Python</code> • <code>Flask</code> • <code>SQLite</code> • <code>Chart.js</code></p>
+      <a href="https://github.com/darshsoam07/Expense-Tracker-with-Insights">View Repository →</a>
+    </td>
+    <td width="50%" valign="top">
+      <h4>Portfolio Spark</h4>
+      <sub><b>Model Context Protocol (MCP)</b></sub>
+      <p>A dual-interface portfolio exposing an MCP server interface, allowing AI assistants to query structured project metadata, skills, and work logs directly.</p>
+      <p><code>TypeScript</code> • <code>TanStack Start</code> • <code>MCP Protocol</code></p>
+      <a href="https://github.com/darshsoam07/Portfolio-Spark">View Repository →</a>
+    </td>
+  </tr>
+</table>
 
-[![QueryVault document retrieval diagram](assets/retrieval.svg)](https://github.com/darshsoam07/QueryVault-Project)
+<div align="center">
+  <img src="./assets/divider.svg" alt="divider" width="100%" />
+</div>
 
-A useful answer should take you back to the passage that supports it. QueryVault lets you upload documents, ask a question in plain English, and follow citations into your own knowledge base. The retrieval layer uses PostgreSQL with pgvector, behind a React and TypeScript interface.
-
-[Explore QueryVault’s retrieval pipeline →](https://github.com/darshsoam07/QueryVault-Project#rag-pipeline)
-
-### Portfolio Spark · A portfolio that tools can read
-
-[![Portfolio Spark browser and MCP interfaces](assets/protocol.svg)](https://darshsoam.vercel.app/)
-
-Alongside the visual portfolio, I built a public Model Context Protocol server. Its tools can look up my projects, skills, and experience, giving an assistant a structured way to answer questions about my work.
-
-[Read the portfolio source →](https://github.com/darshsoam07/Portfolio-Spark)
-
-### More from my workbench
-
-- [Expense Tracker with Insights](https://github.com/darshsoam07/Expense-Tracker-with-Insights) pairs expense tracking with a look at spending patterns.
-- [DSA in Java](https://github.com/darshsoam07/DSA-in-Java-) is where I practice algorithms alongside my infrastructure work. You can also find me on [LeetCode](https://leetcode.com/darshsoam).
-
-## Infrastructure field notes
-
-[![Release path from continuous integration to observability](assets/delivery.svg)](#deployment-walkthrough)
-
-My portfolio covers three related builds. **Cloud Infra Automation** uses Terraform to provision AWS resources. **CI/CD Pipeline Builder** connects Docker builds to GitHub Actions. **K8s Monitoring Stack** brings Prometheus and Grafana into Kubernetes. Together they cover the parts of a deployment I want to understand end to end.
-
-### Deployment walkthrough
-
-<details>
-<summary>Follow a change from commit to monitoring</summary>
+### 03 • Deployment Lifecycle
 
 ```mermaid
 flowchart LR
-    A[Commit] --> B[Build image]
-    B --> C[Store in ECR]
+    A[Local Commit] --> B[Docker Build]
+    B --> C[Push to ECR]
     C --> D[Deploy to EKS]
-    D --> E[Observe service]
+    D --> E[Prometheus Scrape]
+    E --> F[Grafana Alerting]
+
+    style A fill:#1C1917,stroke:#D4AF37,stroke-width:1px,color:#FAF7F2
+    style B fill:#1C1917,stroke:#2E2A27,stroke-width:1px,color:#FAF7F2
+    style C fill:#1C1917,stroke:#2E2A27,stroke-width:1px,color:#FAF7F2
+    style D fill:#1C1917,stroke:#D4AF37,stroke-width:1px,color:#FAF7F2
+    style E fill:#1C1917,stroke:#2E2A27,stroke-width:1px,color:#FAF7F2
+    style F fill:#1C1917,stroke:#997A3A,stroke-width:1px,color:#FAF7F2
 ```
 
-| Question | What I work with |
-| --- | --- |
-| How do I rebuild an environment? | Terraform for infrastructure as code on AWS |
-| How does a change reach a cluster? | GitHub Actions for CI/CD, Docker for packaging, ECR for images, and EKS for Kubernetes |
-| What happens after deployment? | Prometheus for metrics and Grafana for inspecting how a service behaves |
+<div align="center">
+  <img src="./assets/divider.svg" alt="divider" width="100%" />
+</div>
 
-</details>
+### 04 • Technical Credentials & Badges
 
-## Engineering toolbox
+* **Oracle Certified Foundations Associate** — Agentic AI (Oracle University)
+* **AWS Training & Badges:** Solutions Architect Quest • Cloud Practitioner Quest • Cloud Foundations
+* **AI-Powered Cloud Engineer Virtual Internship** — EduSkills / AICTE (8 Weeks)
 
-| Area | Tools |
-| --- | --- |
-| Cloud & provisioning | AWS · Elastic Beanstalk · ECR · EKS · Terraform |
-| Delivery & systems | Linux · Bash · Docker · Kubernetes · GitHub Actions · Jenkins · Git |
-| Observability | Prometheus · Grafana |
-| Programming | Python · Java · JavaScript · TypeScript |
-| Data & retrieval | MySQL · PostgreSQL · Supabase · pgvector |
-| Interfaces | React · HTML · CSS · Tailwind CSS · Figma |
+### 05 • Get in Touch
 
-## Learning roadmap
+Open to internships and engineering discussions in cloud, DevOps, and platform engineering.
 
-I'm working toward a B.Tech in Computer Science at Meerut Institute of Engineering and Technology (2024–2028). My training includes AWS Academy Cloud Foundations, AWS Cloud Quest Solutions Architect, and LLM and RAG Basics.
-
-<details open>
-<summary><strong>What I'm practicing</strong></summary>
-
-- **Repeatable releases.** Take a container from a local Docker build through CI to a Kubernetes deployment. Document the steps that still need someone at a terminal.
-- **Service health.** Use metrics to investigate what changed after a release. Learn which signals are worth putting on a Grafana dashboard.
-- **Secure delivery.** Follow credentials and permissions through the build and deployment stages to understand where access can be narrowed.
-- **Grounded AI.** Explore how retrieval affects an answer and whether a reader can verify it against the cited document.
-
-</details>
-
-## GitHub activity
-
-[Browse my repositories](https://github.com/darshsoam07?tab=repositories) · [View my contribution calendar](https://github.com/darshsoam07#year-list-container)
-
-![GitHub contribution activity for Darsh Soam](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=darshsoam07&theme=github_dark)
-
-## Get in touch
-
-I'm looking for internships and entry-level roles in cloud engineering, DevOps, platform engineering, and site reliability. If your team works on deployments or developer infrastructure, I’d love to hear what you’re building.
-
-[Email me](mailto:darshsoam2006@gmail.com) · [LinkedIn](https://www.linkedin.com/in/darshsoam/) · [Instagram](https://instagram.com/darsh_soam)
+[Portfolio](https://darshsoam.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/darshsoam/) · [Email](mailto:darshsoam2006@gmail.com)
