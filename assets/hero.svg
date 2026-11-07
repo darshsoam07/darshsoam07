@@ -1,62 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 250" width="100%" height="250" fill="none">
-  <defs>
-    <radialGradient id="amberAura" cx="82%" cy="48%" r="65%">
-      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.18" />
-      <stop offset="55%" stop-color="#997A3A" stop-opacity="0.05" />
-      <stop offset="100%" stop-color="#0C0A09" stop-opacity="0" />
-    </radialGradient>
-    <linearGradient id="goldRule" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#997A3A" />
-      <stop offset="50%" stop-color="#D4AF37" />
-      <stop offset="100%" stop-color="#FAF7F2" />
-    </linearGradient>
-    <linearGradient id="pulseBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#2E2A27" />
-      <stop offset="50%" stop-color="#D4AF37">
-        <animate attributeName="stop-color" values="#2E2A27;#D4AF37;#FAF7F2;#D4AF37;#2E2A27" dur="8s" repeatCount="indefinite" />
-      </stop>
-      <stop offset="100%" stop-color="#2E2A27" />
-    </linearGradient>
-  </defs>
-
-  <style>
-    .kicker { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; fill: #D4AF37; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; }
-    .heading { font-family: -apple-system, BlinkMacSystemFont, "Playfair Display", "Cinzel", Georgia, serif; font-size: 34px; fill: #FAF7F2; font-weight: 600; letter-spacing: 2px; }
-    .body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13.5px; fill: #A8A29E; font-weight: 300; }
-    .techline { font-family: "SF Mono", "JetBrains Mono", Consolas, monospace; font-size: 10.5px; fill: #997A3A; letter-spacing: 1.5px; }
-  </style>
-
-  <!-- Background Base -->
-  <rect width="920" height="250" rx="12" fill="#0C0A09" stroke="url(#pulseBorder)" stroke-width="1.2" />
-  <rect width="920" height="250" rx="12" fill="url(#amberAura)" />
-
-  <!-- Horological & Precision Hairlines -->
-  <g opacity="0.22" stroke="#2E2A27" stroke-width="0.8">
-    <line x1="55" y1="0" x2="55" y2="250" />
-    <line x1="280" y1="0" x2="280" y2="250" />
-    <line x1="0" y1="185" x2="920" y2="185" />
-  </g>
-
-  <!-- Horological Mechanical Caliper / Orbital Graphic -->
-  <g transform="translate(780, 125)">
-    <circle r="72" stroke="#2E2A27" stroke-width="1" fill="none" stroke-dasharray="3, 6" />
-    <circle r="52" stroke="#1C1917" stroke-width="7" fill="none" />
-    <circle r="52" stroke="#997A3A" stroke-width="1" fill="none" stroke-opacity="0.3" />
-    <circle r="38" stroke="#D4AF37" stroke-width="1.4" fill="none" stroke-dasharray="35, 15">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite" />
-    </circle>
-    <circle r="18" stroke="#2E2A27" stroke-width="1" fill="#1C1917" />
-    <circle r="4" fill="#D4AF37">
-      <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite" />
-    </circle>
-  </g>
-
-  <!-- Content Hierarchy -->
-  <g transform="translate(50, 68)">
-    <text class="kicker" x="0" y="0">Cloud Infrastructure • Systems Reliability • Agentic AI</text>
-    <text class="heading" x="0" y="40">DARSH SOAM</text>
-    <text class="body" x="0" y="72">From a commit to an observable, resilient production service.</text>
-    <line x1="0" y1="90" x2="440" y2="90" stroke="url(#goldRule)" stroke-width="1.2" opacity="0.75" />
-    <text class="techline" x="0" y="115">AWS • TERRAFORM • KUBERNETES • RABBITMQ • PGVECTOR</text>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="374" viewBox="0 0 800 374" role="img"><title>Darsh Soam — Cloud and DevOps Engineering</title>
+<defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#2E2A27" stroke-width=".7"/></pattern></defs>
+<style>text{font-family:Arial,sans-serif}.mono{font-family:Consolas,monospace}.signal{stroke-dasharray:5 76}@media(prefers-reduced-motion:no-preference){.signal{animation:flow 8s linear infinite}.led{animation:breathe 6s ease-in-out infinite}@keyframes flow{to{stroke-dashoffset:-162}}@keyframes breathe{50%{opacity:.55}}}</style>
+<rect width="800" height="374" rx="16" fill="#0C0A09"/><rect x="500" width="300" height="252" fill="url(#grid)"/>
+<g transform="translate(675 117)" fill="none" stroke="#997A3A"><path d="M-78 0l78-38 78 38-78 38z"/><path d="M-78 14l78-38 78 38-78 38z"/><path d="M-78 28l78-38 78 38-78 38z"/><path d="M-78 42l78-38 78 38-78 38z"/><path d="M0-38v-36m78 116h45m-201 0h-43" stroke="#78B8A2"/></g>
+<text x="34" y="44" fill="#78B8A2" font-size="17" class="mono">~/darsh $ build --resilient</text>
+<text x="30" y="128" font-size="76" fill="#FAF7F2" font-weight="700">DARSH SOAM</text><path d="M36 147h90" stroke="#D4AF37" stroke-width="3"/>
+<text x="34" y="187" font-size="30" fill="#FAF7F2">Cloud &amp; DevOps Engineering</text>
+<text x="35" y="222" font-size="19" fill="#C6C1BA">Distributed Systems • Reliability • Infrastructure Automation</text>
+<path d="M0 249h800" stroke="#2E2A27"/><text x="34" y="281" font-size="20" fill="#D4AF37">Design. Deploy. Recover. Repeat.</text>
+<path d="M66 312H710" stroke="#59625C"/><path class="signal" d="M66 312H710" stroke="#78B8A2" stroke-width="2"/><circle class="led" cx="66" cy="312" r="6" fill="#78B8A2" style="animation-delay:0s"/><text x="66" y="345" class="mono" font-size="18" fill="#FAF7F2" text-anchor="middle">Dev</text><circle class="led" cx="227" cy="312" r="6" fill="#78B8A2" style="animation-delay:-1s"/><text x="227" y="345" class="mono" font-size="18" fill="#FAF7F2" text-anchor="middle">CI/CD</text><circle class="led" cx="388" cy="312" r="6" fill="#78B8A2" style="animation-delay:-2s"/><text x="388" y="345" class="mono" font-size="18" fill="#FAF7F2" text-anchor="middle">Image</text><circle class="led" cx="549" cy="312" r="6" fill="#78B8A2" style="animation-delay:-3s"/><text x="549" y="345" class="mono" font-size="18" fill="#FAF7F2" text-anchor="middle">Cloud</text><circle class="led" cx="710" cy="312" r="6" fill="#78B8A2" style="animation-delay:-4s"/><text x="710" y="345" class="mono" font-size="18" fill="#FAF7F2" text-anchor="middle">Observe</text></svg>

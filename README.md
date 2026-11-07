@@ -1,92 +1,81 @@
-<div align="center">
-  <img src="./assets/hero.svg" alt="Darsh Soam — Cloud & DevOps Engineer" width="100%" />
-</div>
+# Darsh Soam
 
-<br/>
+![Cloud and DevOps Engineering. Distributed systems, reliability and infrastructure automation.](./assets/hero.svg)
 
-### 01 • Philosophy & Focus
-I am a Computer Science student at **MIET (2024–2028)** focused on cloud infrastructure, reliability engineering, and agentic workflows. I care about what happens between writing code and keeping it alive in production:
-* **Declarative Infrastructure:** Can the entire environment be provisioned reproducibly through Terraform?
-* **Fault Recovery:** How do distributed components behave when queues saturate or workers drop?
-* **Observable Health:** What signals on a Grafana dashboard genuinely matter during an incident?
+<img align="right" src="./assets/darsh.jpg" width="94" alt="Portrait of Darsh Soam" />
 
-[Explore Interactive Portfolio →](https://darshsoam.vercel.app/)
+I’m a Computer Science and Engineering student at **MIET in Meerut, India** (B.Tech, 2024–2028). I study what happens after a commit leaves a developer’s machine. If a worker loses its connection or an answer cites the wrong passage, I want to see where the system went wrong and how it recovers.
 
-<div align="center">
-  <img src="./assets/divider.svg" alt="divider" width="100%" />
-</div>
+**[Explore my interactive portfolio →](https://darshsoam.vercel.app/)**
 
-### 02 • Featured Engineering Systems
+## Engineering projects
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h4>FailureLab</h4>
-      <sub><b>Distributed Systems • Reliability Engineering</b></sub>
-      <p>A testing playground for resilience patterns under controlled fault injection. Implements transactional outbox, circuit breakers, and bounded retries across asynchronous workers.</p>
-      <p><code>Python</code> • <code>FastAPI</code> • <code>RabbitMQ</code> • <code>Docker</code></p>
-      <a href="https://github.com/darshsoam07/FailureLab">View Repository →</a>
-    </td>
-    <td width="50%" valign="top">
-      <h4>QueryVault</h4>
-      <sub><b>AI Engineering • Document Intelligence</b></sub>
-      <p>Grounded enterprise retrieval platform pairing hybrid vector and keyword search with exact source citation traceability and PostgreSQL Row-Level Security.</p>
-      <p><code>React</code> • <code>TypeScript</code> • <code>Supabase</code> • <code>pgvector</code></p>
-      <a href="https://github.com/darshsoam07/QueryVault-Project">View Repository →</a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h4>Expense Tracker with Insights</h4>
-      <sub><b>Full-Stack Analytics</b></sub>
-      <p>Financial transaction tracker featuring session-based authentication, category-based spending analytics, and clean CSV export capabilities.</p>
-      <p><code>Python</code> • <code>Flask</code> • <code>SQLite</code> • <code>Chart.js</code></p>
-      <a href="https://github.com/darshsoam07/Expense-Tracker-with-Insights">View Repository →</a>
-    </td>
-    <td width="50%" valign="top">
-      <h4>Portfolio Spark</h4>
-      <sub><b>Model Context Protocol (MCP)</b></sub>
-      <p>A dual-interface portfolio exposing an MCP server interface, allowing AI assistants to query structured project metadata, skills, and work logs directly.</p>
-      <p><code>TypeScript</code> • <code>TanStack Start</code> • <code>MCP Protocol</code></p>
-      <a href="https://github.com/darshsoam07/Portfolio-Spark">View Repository →</a>
-    </td>
-  </tr>
-</table>
+### FailureLab · Distributed systems reliability
 
-<div align="center">
-  <img src="./assets/divider.svg" alt="divider" width="100%" />
-</div>
+What happens to an order when the database accepts it but the message broker goes away? FailureLab writes the order and its outbox event in one PostgreSQL transaction. A relay publishes to RabbitMQ, and idempotent reservations let workers handle redelivery safely.
 
-### 03 • Deployment Lifecycle
+**Local experiment.** In the October 17 fault-injection run, P95 latency rose from 107 ms to 624–658 ms. The watchdog stopped the experiment, the outbox drained, and the original workers recovered without a restart.
+
+`Python` · `FastAPI` · `PostgreSQL` · `RabbitMQ` · `Toxiproxy` · `React`
+
+[Inspect the fault experiment and recorded results →](https://github.com/darshsoam07/FailureLab)
+
+### QueryVault · Evidence-grounded retrieval
+
+An answer is only useful if the reader can inspect its evidence. QueryVault ingests documents in the background, combines full-text and vector retrieval, and checks citations against retrieved passages. PostgreSQL row-level policies scope access by tenant.
+
+**Verification boundary.** The browser rehearsal exercises upload, selection, and citation navigation with fixture storage and scripted answers. Live model and database integration require separate verification.
+
+`TypeScript` · `React` · `TanStack Start` · `Supabase` · `pgvector` · `Docker`
+
+[Inspect the retrieval pipeline and rehearsal →](https://github.com/darshsoam07/QueryVault-Project)
+
+### Expense Tracker with Insights · Application engineering
+
+How much did I spend in one category over a particular period? This Flask app scopes records to the signed-in account and lets the user filter transactions, inspect spending charts, and export the filtered expenses. Docker Compose makes the SQLite-backed app reproducible locally.
+
+`Python` · `Flask` · `SQLite` · `JavaScript` · `Chart.js`
+
+[Inspect the dashboard and local setup →](https://github.com/darshsoam07/Expense-Tracker-with-Insights)
+
+Also built [Portfolio Spark](https://github.com/darshsoam07/Portfolio-Spark), a portfolio with a Model Context Protocol interface for querying project and skills data.
+
+![](./assets/divider.svg)
+
+## From commit to recovery
+
+A conceptual map of the release cycle I’m studying. The return path matters as much as the deployment.
 
 ```mermaid
-flowchart LR
-    A[Local Commit] --> B[Docker Build]
-    B --> C[Push to ECR]
-    C --> D[Deploy to EKS]
-    D --> E[Prometheus Scrape]
-    E --> F[Grafana Alerting]
-
-    style A fill:#1C1917,stroke:#D4AF37,stroke-width:1px,color:#FAF7F2
-    style B fill:#1C1917,stroke:#2E2A27,stroke-width:1px,color:#FAF7F2
-    style C fill:#1C1917,stroke:#2E2A27,stroke-width:1px,color:#FAF7F2
-    style D fill:#1C1917,stroke:#D4AF37,stroke-width:1px,color:#FAF7F2
-    style E fill:#1C1917,stroke:#2E2A27,stroke-width:1px,color:#FAF7F2
-    style F fill:#1C1917,stroke:#997A3A,stroke-width:1px,color:#FAF7F2
+flowchart TD
+    A[Code] --> B[Build and test]
+    B --> C[Package]
+    C --> D[Deploy]
+    D --> E[Observe]
+    E --> F[Recover]
+    F -. feedback .-> A
 ```
 
-<div align="center">
-  <img src="./assets/divider.svg" alt="divider" width="100%" />
-</div>
+## Systems and tools
 
-### 04 • Technical Credentials & Badges
+- **Used in projects** — Docker Compose for local environments, RabbitMQ for asynchronous work, Toxiproxy for controlled faults, and PostgreSQL for durable state and tenant isolation.
+- **In practice and coursework** — AWS EC2, VPC, IAM, S3 and CloudWatch, plus Terraform, Linux, Bash, Kubernetes and GitHub Actions.
+- **Exploring** — platform engineering, SRE, and how agentic workflows can use operational evidence.
 
-* **Oracle Certified Foundations Associate** — Agentic AI (Oracle University)
-* **AWS Training & Badges:** Solutions Architect Quest • Cloud Practitioner Quest • Cloud Foundations
-* **AI-Powered Cloud Engineer Virtual Internship** — EduSkills / AICTE (8 Weeks)
+## Credentials and training
 
-### 05 • Get in Touch
+- **Oracle University** · [Oracle Certified Foundations Associate — Agentic AI](https://darshsoam.vercel.app/certifications/oracle-agentic-ai-badge.jpg), 2026.
+- **AWS Training and Certification** · AWS Cloud Quest training badges in [Solutions Architect](https://darshsoam.vercel.app/certifications/aws-cloud-quest-solutions-architect-badge.png) and [Cloud Practitioner](https://darshsoam.vercel.app/certifications/aws-cloud-quest-cloud-practitioner-badge.png), 2026.
+- **EduSkills** · [AI-Powered Cloud Engineer Virtual Internship](https://darshsoam.vercel.app/certifications/eduskills-ai-cloud-engineer-internship-certificate-public.jpg), eight weeks in 2026.
 
-Open to internships and engineering discussions in cloud, DevOps, and platform engineering.
+## Engineering activity
 
-[Portfolio](https://darshsoam.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/darshsoam/) · [Email](mailto:darshsoam2006@gmail.com)
+[View my contribution calendar on GitHub →](https://github.com/darshsoam07#year-list-container)
+
+## Connect
+
+I’m looking for internships and early-career opportunities in cloud, DevOps, SRE, and platform engineering.
+
+[Portfolio](https://darshsoam.vercel.app/) · [GitHub](https://github.com/darshsoam07) · [LinkedIn](https://www.linkedin.com/in/darsh-soam-42a605324/) · [Email me](mailto:darshsoam2006@gmail.com)
+
+![Make recovery observable.](./assets/footer.svg)
