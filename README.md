@@ -12,11 +12,15 @@ I'm Darsh, a computer science student at MIET in Meerut, specializing in cloud c
 
 ### QueryVault · Ask a document and trace the answer
 
+[![QueryVault document retrieval diagram](assets/retrieval.svg)](https://github.com/darshsoam07/QueryVault-Project)
+
 A useful answer should take you back to the passage that supports it. QueryVault lets you upload documents, ask a question in plain English, and follow citations into your own knowledge base. The retrieval layer uses PostgreSQL with pgvector, behind a React and TypeScript interface.
 
 [Explore QueryVault’s retrieval pipeline →](https://github.com/darshsoam07/QueryVault-Project#rag-pipeline)
 
 ### Portfolio Spark · A portfolio that tools can read
+
+[![Portfolio Spark browser and MCP interfaces](assets/protocol.svg)](https://darshsoam.vercel.app/)
 
 Alongside the visual portfolio, I built a public Model Context Protocol server. Its tools can look up my projects, skills, and experience, giving an assistant a structured way to answer questions about my work.
 
@@ -29,7 +33,14 @@ Alongside the visual portfolio, I built a public Model Context Protocol server. 
 
 ## Infrastructure field notes
 
+[![Release path from continuous integration to observability](assets/delivery.svg)](#deployment-walkthrough)
+
 My portfolio covers three related builds. **Cloud Infra Automation** uses Terraform to provision AWS resources. **CI/CD Pipeline Builder** connects Docker builds to GitHub Actions. **K8s Monitoring Stack** brings Prometheus and Grafana into Kubernetes. Together they cover the parts of a deployment I want to understand end to end.
+
+### Deployment walkthrough
+
+<details>
+<summary>Follow a change from commit to monitoring</summary>
 
 ```mermaid
 flowchart LR
@@ -44,6 +55,8 @@ flowchart LR
 | How do I rebuild an environment? | Terraform for infrastructure as code on AWS |
 | How does a change reach a cluster? | GitHub Actions for CI/CD, Docker for packaging, ECR for images, and EKS for Kubernetes |
 | What happens after deployment? | Prometheus for metrics and Grafana for inspecting how a service behaves |
+
+</details>
 
 ## Engineering toolbox
 
