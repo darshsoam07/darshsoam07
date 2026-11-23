@@ -1,0 +1,353 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 600" width="100%" role="img" aria-label="Immersive orbital tech stack diagram">
+  <defs>
+    
+    <linearGradient id="canvas-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#091122" />
+      <stop offset="50%" stop-color="#060C1A" />
+      <stop offset="100%" stop-color="#040812" />
+    </linearGradient>
+
+    
+    <radialGradient id="glow-tr" cx="85%" cy="12%" r="48%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.32" />
+      <stop offset="50%" stop-color="#1D4ED8" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#060C1A" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow-center" cx="50%" cy="37%" r="36%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.14" />
+      <stop offset="60%" stop-color="#1E3A8A" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#060C1A" stop-opacity="0" />
+    </radialGradient>
+
+    
+    <radialGradient id="orb-body" cx="38%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.55" />
+      <stop offset="55%" stop-color="#11224D" stop-opacity="0.92" />
+      <stop offset="100%" stop-color="#09132B" stop-opacity="0.98" />
+    </radialGradient>
+    <linearGradient id="orb-rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#93C5FD" stop-opacity="0.85" />
+      <stop offset="50%" stop-color="#3B82F6" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0.8" />
+    </linearGradient>
+
+    
+    <linearGradient id="glass-tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A2947" stop-opacity="0.86" />
+      <stop offset="100%" stop-color="#0C1528" stop-opacity="0.94" />
+    </linearGradient>
+    <linearGradient id="glass-border" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.38" />
+      <stop offset="50%" stop-color="#334E7B" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#1E293B" stop-opacity="0.4" />
+    </linearGradient>
+
+    
+    <radialGradient id="aura-tf" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.42" />
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="aura-docker" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0.42" />
+      <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="aura-react" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.42" />
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="aura-k8s" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="aura-py" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FACC15" stop-opacity="0.34" />
+      <stop offset="100%" stop-color="#FACC15" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="aura-pg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.40" />
+      <stop offset="100%" stop-color="#818CF8" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="aura-aws" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.38" />
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0" />
+    </radialGradient>
+
+    
+    <linearGradient id="dock-bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0E182D" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#0B1325" stop-opacity="0.92" />
+      <stop offset="100%" stop-color="#0E182D" stop-opacity="0.95" />
+    </linearGradient>
+
+    
+    <linearGradient id="aws-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#FBBF24" />
+    </linearGradient>
+    <linearGradient id="py-blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60A5FA" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="py-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDE047" />
+      <stop offset="100%" stop-color="#EAB308" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .orbit {
+      fill: none;
+      stroke: #2B4570;
+      stroke-width: 1.2;
+      opacity: 0.5;
+    }
+    .orbit-pulse-1 {
+      fill: none;
+      stroke: #60A5FA;
+      stroke-width: 1.4;
+      stroke-linecap: round;
+      stroke-dasharray: 34 380;
+      opacity: 0.65;
+      animation: dashFwd 13s linear infinite;
+    }
+    .orbit-pulse-2 {
+      fill: none;
+      stroke: #22D3EE;
+      stroke-width: 1.3;
+      stroke-linecap: round;
+      stroke-dasharray: 24 410;
+      opacity: 0.55;
+      animation: dashRev 17s linear infinite;
+    }
+    .orbit-pulse-3 {
+      fill: none;
+      stroke: #A78BFA;
+      stroke-width: 1.2;
+      stroke-linecap: round;
+      stroke-dasharray: 20 440;
+      opacity: 0.45;
+      animation: dashFwd 21s linear infinite;
+    }
+
+    .node {
+      animation: floatNode 5.8s ease-in-out infinite;
+    }
+    .n1 { animation-delay: 0.0s; }
+    .n2 { animation-delay: 0.8s; }
+    .n3 { animation-delay: 1.6s; }
+    .n4 { animation-delay: 2.4s; }
+    .n5 { animation-delay: 3.2s; }
+    .n6 { animation-delay: 4.0s; }
+    .n7 { animation-delay: 4.8s; }
+
+    .core-breathe {
+      animation: breathe 4.8s ease-in-out infinite;
+    }
+    .status-dot {
+      animation: blink 3.2s ease-in-out infinite;
+    }
+
+    .core-title {
+      font-family: 'SF Mono', ui-monospace, Menlo, Consolas, monospace;
+      font-size: 11px;
+      font-weight: 700;
+      fill: #E0F2FE;
+      letter-spacing: 2px;
+      text-anchor: middle;
+    }
+    .core-sub {
+      font-family: 'SF Mono', ui-monospace, Menlo, Consolas, monospace;
+      font-size: 8.5px;
+      font-weight: 600;
+      fill: #7DD3FC;
+      letter-spacing: 1.3px;
+      text-anchor: middle;
+      opacity: 0.9;
+    }
+
+    .dock-bar {
+      fill: url(#dock-bg);
+      stroke: #1B2C4E;
+      stroke-width: 1;
+    }
+    .pill-text {
+      font-family: 'SF Mono', ui-monospace, Menlo, Consolas, monospace;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 1.1px;
+    }
+    .dock-items {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      fill: #CBD5E1;
+      letter-spacing: 0.25px;
+    }
+
+    @keyframes floatNode {
+      0%, 100% { transform: translateY(0px); }
+      50%      { transform: translateY(-6px); }
+    }
+    @keyframes breathe {
+      0%, 100% { opacity: 0.72; }
+      50%      { opacity: 1; }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 0.35; }
+      50%      { opacity: 1; }
+    }
+    @keyframes dashFwd {
+      to { stroke-dashoffset: -828; }
+    }
+    @keyframes dashRev {
+      to { stroke-dashoffset: 868; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .node, .core-breathe, .status-dot, .orbit-pulse-1, .orbit-pulse-2, .orbit-pulse-3 {
+        animation: none;
+      }
+    }
+  </style>
+
+  
+  <rect x="0" y="0" width="840" height="600" rx="22" fill="url(#canvas-bg)" />
+  <rect x="0" y="0" width="840" height="600" rx="22" fill="url(#glow-tr)" />
+  <rect x="0" y="0" width="840" height="600" rx="22" fill="url(#glow-center)" />
+  <rect x="0.75" y="0.75" width="838.5" height="598.5" rx="21.25" fill="none" stroke="#182746" stroke-width="1.5" />
+
+  
+  <circle cx="810" cy="24" r="3" fill="#60A5FA" class="status-dot" />
+
+  
+  <g>
+    
+    <ellipse cx="420" cy="218" rx="306" ry="82" class="orbit" />
+    <ellipse cx="420" cy="218" rx="306" ry="82" transform="rotate(24 420 218)" class="orbit" />
+    <ellipse cx="420" cy="218" rx="306" ry="82" transform="rotate(-24 420 218)" class="orbit" />
+
+    
+    <ellipse cx="420" cy="218" rx="306" ry="82" class="orbit-pulse-1" />
+    <ellipse cx="420" cy="218" rx="306" ry="82" transform="rotate(-24 420 218)" class="orbit-pulse-2" />
+    <ellipse cx="420" cy="218" rx="306" ry="82" transform="rotate(24 420 218)" class="orbit-pulse-3" />
+
+    
+    <circle cx="420" cy="218" r="56" fill="none" stroke="#38BDF8" stroke-width="1" stroke-dasharray="3 6" opacity="0.32" />
+    <circle cx="420" cy="218" r="46" fill="url(#orb-body)" stroke="url(#orb-rim)" stroke-width="1.6" class="core-breathe" />
+    
+    <path d="M392 192 A38 38 0 0 1 448 192" fill="none" stroke="#BAE6FD" stroke-width="1.2" stroke-linecap="round" opacity="0.45" />
+    <text x="420" y="215" class="core-title">TOOLKIT</text>
+    <text x="420" y="230" class="core-sub">CLOUD · DEV</text>
+  </g>
+
+  
+  <g class="node n1">
+    <circle cx="136" cy="164" r="44" fill="url(#aura-tf)" />
+    <rect x="108" y="136" width="56" height="56" rx="15" fill="url(#glass-tile)" stroke="url(#glass-border)" stroke-width="1.2" />
+    <line x1="120" y1="137.2" x2="152" y2="137.2" stroke="#C4B5FD" stroke-width="1" stroke-linecap="round" opacity="0.5" />
+    
+    <polygon points="122,152 132,157.5 132,168.5 122,163" fill="#A78BFA" />
+    <polygon points="134,158.5 144,164 144,175 134,169.5" fill="#7C3AED" />
+    <polygon points="134,146.5 144,152 144,163 134,157.5" fill="#8B5CF6" />
+    <polygon points="146,158.5 156,153 156,164 146,169.5" fill="#6D28D9" />
+  </g>
+
+  
+  <g class="node n2">
+    <circle cx="314" cy="124" r="44" fill="url(#aura-docker)" />
+    <rect x="286" y="96" width="56" height="56" rx="15" fill="url(#glass-tile)" stroke="url(#glass-border)" stroke-width="1.2" />
+    <line x1="298" y1="97.2" x2="330" y2="97.2" stroke="#7DD3FC" stroke-width="1" stroke-linecap="round" opacity="0.5" />
+    
+    <rect x="301" y="116.5" width="5.2" height="4.8" rx="1" fill="#38BDF8" />
+    <rect x="307.5" y="116.5" width="5.2" height="4.8" rx="1" fill="#38BDF8" />
+    <rect x="314" y="116.5" width="5.2" height="4.8" rx="1" fill="#38BDF8" />
+    <rect x="320.5" y="116.5" width="5.2" height="4.8" rx="1" fill="#7DD3FC" />
+    <rect x="307.5" y="110.5" width="5.2" height="4.8" rx="1" fill="#7DD3FC" />
+    <rect x="314" y="110.5" width="5.2" height="4.8" rx="1" fill="#7DD3FC" />
+    <path d="M297.5 123.5 h29.5 c1 8 -4.5 14 -14.8 14 c-8.5 0 -14.7 -5.2 -14.7 -14 z" fill="#0EA5E9" />
+    <path d="M327 125.5 c2.5 -2.2 4.8 -1.2 5.5 1 c-1.2 2.2 -3.2 3 -5.5 3" fill="#38BDF8" />
+    <circle cx="305" cy="128.5" r="1.4" fill="#091122" />
+  </g>
+
+  
+  <g class="node n3">
+    <circle cx="532" cy="140" r="44" fill="url(#aura-react)" />
+    <rect x="504" y="112" width="56" height="56" rx="15" fill="url(#glass-tile)" stroke="url(#glass-border)" stroke-width="1.2" />
+    <line x1="516" y1="113.2" x2="548" y2="113.2" stroke="#67E8F9" stroke-width="1" stroke-linecap="round" opacity="0.5" />
+    
+    <circle cx="532" cy="140" r="3.2" fill="#22D3EE" />
+    <ellipse cx="532" cy="140" rx="15.5" ry="6.2" fill="none" stroke="#38BDF8" stroke-width="1.7" />
+    <ellipse cx="532" cy="140" rx="15.5" ry="6.2" transform="rotate(60 532 140)" fill="none" stroke="#22D3EE" stroke-width="1.7" />
+    <ellipse cx="532" cy="140" rx="15.5" ry="6.2" transform="rotate(-60 532 140)" fill="none" stroke="#67E8F9" stroke-width="1.7" />
+  </g>
+
+  
+  <g class="node n4">
+    <circle cx="702" cy="204" r="44" fill="url(#aura-k8s)" />
+    <rect x="674" y="176" width="56" height="56" rx="15" fill="url(#glass-tile)" stroke="url(#glass-border)" stroke-width="1.2" />
+    <line x1="686" y1="177.2" x2="718" y2="177.2" stroke="#93C5FD" stroke-width="1" stroke-linecap="round" opacity="0.5" />
+    
+    <polygon points="702,188 715.5,194.5 719,209 709.5,220.5 694.5,220.5 685,209 688.5,194.5" fill="#1D4ED8" fill-opacity="0.25" stroke="#60A5FA" stroke-width="1.8" stroke-linejoin="round" />
+    <circle cx="702" cy="204.5" r="5.5" fill="none" stroke="#93C5FD" stroke-width="1.9" />
+    <line x1="702" y1="191.5" x2="702" y2="199" stroke="#93C5FD" stroke-width="1.8" stroke-linecap="round" />
+    <line x1="702" y1="210" x2="702" y2="217.5" stroke="#93C5FD" stroke-width="1.8" stroke-linecap="round" />
+    <line x1="690" y1="204.5" x2="696.5" y2="204.5" stroke="#93C5FD" stroke-width="1.8" stroke-linecap="round" />
+    <line x1="707.5" y1="204.5" x2="714" y2="204.5" stroke="#93C5FD" stroke-width="1.8" stroke-linecap="round" />
+  </g>
+
+  
+  <g class="node n5">
+    <circle cx="608" cy="292" r="44" fill="url(#aura-py)" />
+    <rect x="580" y="264" width="56" height="56" rx="15" fill="url(#glass-tile)" stroke="url(#glass-border)" stroke-width="1.2" />
+    <line x1="592" y1="265.2" x2="624" y2="265.2" stroke="#FDE047" stroke-width="1" stroke-linecap="round" opacity="0.45" />
+    
+    <path d="M608 278 c-6.5 0 -6.5 2.8 -6.5 5.8 v3.7 h11.5 v2 h-15.5 c-3.8 0 -6 2.8 -6 6.8 c0 4 2.2 6.8 6 6.8 h3 v-3.8 c0 -3.8 2.8 -6 6.8 -6 h7.8 c3.2 0 5.5 -2.2 5.5 -5.5 v-4.8 c0 -3 -2.6 -5 -6 -5 z" fill="url(#py-blue)" />
+    <path d="M608 307 c6.5 0 6.5 -2.8 6.5 -5.8 v-3.7 h-11.5 v-2 h15.5 c3.8 0 6 -2.8 6 -6.8 c0 -4 -2.2 -6.8 -6 -6.8 h-3 v3.8 c0 3.8 -2.8 6 -6.8 6 h-7.8 c-3.2 0 -5.5 2.2 -5.5 5.5 v4.8 c0 3 2.6 5 6 5 z" fill="url(#py-gold)" />
+    <circle cx="604.2" cy="283" r="1.4" fill="#091122" />
+    <circle cx="611.8" cy="302" r="1.4" fill="#091122" />
+  </g>
+
+  
+  <g class="node n6">
+    <circle cx="342" cy="322" r="44" fill="url(#aura-pg)" />
+    <rect x="314" y="294" width="56" height="56" rx="15" fill="url(#glass-tile)" stroke="url(#glass-border)" stroke-width="1.2" />
+    <line x1="326" y1="295.2" x2="358" y2="295.2" stroke="#A5B4FC" stroke-width="1" stroke-linecap="round" opacity="0.5" />
+    
+    <ellipse cx="342" cy="311.5" rx="13" ry="4.8" fill="#818CF8" fill-opacity="0.22" stroke="#A5B4FC" stroke-width="1.8" />
+    <path d="M329 311.5 v9.5 c0 2.6 5.8 4.8 13 4.8 s13 -2.2 13 -4.8 v-9.5" fill="none" stroke="#818CF8" stroke-width="1.8" />
+    <path d="M329 321 v9.5 c0 2.6 5.8 4.8 13 4.8 s13 -2.2 13 -4.8 v-9.5" fill="none" stroke="#6366F1" stroke-width="1.8" />
+  </g>
+
+  
+  <g class="node n7">
+    <circle cx="156" cy="284" r="44" fill="url(#aura-aws)" />
+    <rect x="128" y="256" width="56" height="56" rx="15" fill="url(#glass-tile)" stroke="url(#glass-border)" stroke-width="1.2" />
+    <line x1="140" y1="257.2" x2="172" y2="257.2" stroke="#FCD34D" stroke-width="1" stroke-linecap="round" opacity="0.45" />
+    
+    <path d="M145 285.5 h21.5 a5.2 5.2 0 0 0 1 -10.3 a7.8 7.8 0 0 0 -15 -2 a6.2 6.2 0 0 0 -7.5 12.3 z" fill="#F8FAFC" fill-opacity="0.12" stroke="#F8FAFC" stroke-width="1.8" stroke-linejoin="round" />
+    <path d="M142.5 292 q13.5 6 26.5 0" fill="none" stroke="url(#aws-grad)" stroke-width="2.2" stroke-linecap="round" />
+    <path d="M166 289.5 l4 1.6 l-1.8 3.6" fill="none" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  
+  
+  <rect x="42" y="406" width="756" height="46" rx="12" class="dock-bar" />
+  <rect x="54" y="416" width="142" height="26" rx="7" fill="#22D3EE" fill-opacity="0.10" stroke="#22D3EE" stroke-opacity="0.28" stroke-width="1" />
+  <circle cx="67" cy="429" r="3" fill="#22D3EE" />
+  <text x="77" y="432.5" class="pill-text" fill="#22D3EE">CLOUD &amp; OPS</text>
+  <text x="216" y="433.5" class="dock-items">AWS  ·  Terraform  ·  Docker  ·  Kubernetes  ·  Helm  ·  Linux  ·  GitHub Actions  ·  Jenkins</text>
+
+  
+  <rect x="42" y="464" width="756" height="46" rx="12" class="dock-bar" />
+  <rect x="54" y="474" width="142" height="26" rx="7" fill="#818CF8" fill-opacity="0.10" stroke="#818CF8" stroke-opacity="0.28" stroke-width="1" />
+  <circle cx="67" cy="487" r="3" fill="#818CF8" />
+  <text x="77" y="490.5" class="pill-text" fill="#A5B4FC">BACKEND &amp; AI</text>
+  <text x="216" y="491.5" class="dock-items">Python  ·  FastAPI  ·  Flask  ·  PostgreSQL  ·  SQLite  ·  LangChain  ·  RAG Workflows</text>
+
+  
+  <rect x="42" y="522" width="756" height="46" rx="12" class="dock-bar" />
+  <rect x="54" y="532" width="142" height="26" rx="7" fill="#34D399" fill-opacity="0.10" stroke="#34D399" stroke-opacity="0.28" stroke-width="1" />
+  <circle cx="67" cy="545" r="3" fill="#34D399" />
+  <text x="77" y="548.5" class="pill-text" fill="#6EE7B7">FRONTEND</text>
+  <text x="216" y="549.5" class="dock-items">React  ·  TypeScript  ·  Vite  ·  Tailwind CSS  ·  Java  ·  Bash  ·  Git  ·  WSL2</text>
+</svg>

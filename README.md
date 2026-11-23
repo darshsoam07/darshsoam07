@@ -10,7 +10,7 @@ I’m studying Computer Science and Engineering at MIET in Meerut, graduating in
 
 In FailureLab, I can interrupt an inventory request and follow the order through the queue. I watch latency during the fault, then check whether the worker can finish the reservation after the connection returns.
 
-![Three connected infrastructure racks](./assets/stack.svg?v=2)
+![Three connected infrastructure racks](./assets/techstack.svg?v=1)
 
 - **Cloud and provisioning** — AWS (EC2, VPC, IAM, S3, CloudWatch), Terraform, Linux, Bash
 - **Delivery** — Docker, Docker Compose, Kubernetes, GitHub Actions
